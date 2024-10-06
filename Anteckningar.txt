@@ -1,0 +1,25 @@
+﻿Inlämningsuppgift 1
+
+Projekt: Bankkonsolapplikation
+
+Utveckla en konsolapplikation som simulerar ett enkelt banksystem. Applikationen ska alltid vara igång tills 
+användare väljer själv att stänga den. Användare ska kunna:
+
+Kontohantering: Skapa tre olika typer av bankkonton: personkonto, sparkonto och investeringskonto, 
+med unika kontonummer och initiala saldon. Varje konto ska lagra information om kontoinnehavarens namn och saldo.
+
+Transaktioner: Implementera funktioner för att sätta in pengar, ta ut pengar och överföra pengar 
+mellan de tre kontotyperna. Användarna ska ange kontonummer för både avsändare och mottagare vid överföringar.
+
+Balanskontroll: Ge användarna möjlighet att kontrollera saldot på ett specifikt konto.
+
+Inputvalidering: Validera att användarinmatningar är korrekta, så att insättningar och uttag endast sker 
+med siffror och att konton finns innan transaktioner genomförs.
+
+Transaktionshistorik (valfritt): Spåra och visa varje transaktion (insättningar, uttag, överföringar) för varje konto, 
+inklusive en sammanfattning av de senaste transaktionerna.
+
+Ni ska inte använda Collections (List, Arrays osv..) än, så de 3 kontotyper är fasta (attributer) i klassen.
+
+VG - Implementera enkelt Felhantering (även om vi inte snackade om det än) och fokusera på Clean Code 
+(Läsbarhet, namngivning på klasser,variabel,metoder, KOD STRUKTUR)
