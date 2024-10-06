@@ -13,10 +13,10 @@
             while (backToStart)
             {
                 User.PrintOutStartMeny();
-                int userOptionStart = Convert.ToInt32(Console.ReadLine()!);
+                string userOptionStart = (Console.ReadLine()!);
 
 
-                if (userOptionStart == 1)
+                if (userOptionStart == "1")
                 {
                     Console.WriteLine("Vilket konto vill du sätta in pengar på: ");
                     int userOptionSättaIn = Convert.ToInt32(Console.ReadLine()!);
@@ -42,7 +42,7 @@
                     }
 
                 }
-                else if (userOptionStart == 2)
+                else if (userOptionStart == "2")
                 {
                     Console.WriteLine("Vilket konto vill du ta ut pengar från: ");
                     int userOptionTaUt = Convert.ToInt32(Console.ReadLine()!);
@@ -68,7 +68,7 @@
                     }
 
                 }
-                else if (userOptionStart == 3)
+                else if (userOptionStart == "3")
                 {
                     Console.WriteLine("Hur mycket vill du överföra: ");
                     int moneyToTransfer = Convert.ToInt32(Console.ReadLine()!);
@@ -128,7 +128,7 @@
 
 
                 }
-                else if (userOptionStart == 4)
+                else if (userOptionStart == "4")
                 {
                     Console.WriteLine("Skriv in kontonummer för det konto du vill kontrollera: ");
                     int userOptionSaldo = Convert.ToInt32(Console.ReadLine()!);
@@ -151,9 +151,13 @@
                     }
 
                 }
-                else if (userOptionStart == 5)
+                else if (userOptionStart == "5")
                 {
                     backToStart = false;
+                }
+                else if (userOptionStart != "1" && userOptionStart != "2" && userOptionStart != "3" && userOptionStart != "4" && userOptionStart != "5")
+                {
+                    Console.WriteLine("Du måste välja ett nummer mellan 1-5");
                 }
 
             }
