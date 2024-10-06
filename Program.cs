@@ -6,7 +6,7 @@
         {
 
             Personkonto personkonto = new Personkonto(123456789, 10000);
-            Sparkonto sparkonto = new Sparkonto(23456789, 5000);
+            Sparkonto sparkonto = new Sparkonto(23456789, 22000);
             Investeringskonto investeringskonto = new Investeringskonto(3456789, 50000);
             bool backToStart = true;
 
@@ -101,25 +101,27 @@
                     }
 
                     Console.WriteLine("Vilket konto vill du överföra pengar TILL: ");
-                    if (userOptionTransfer == 123456789)
+                    int userOptionTransferTo = Convert.ToInt32(Console.ReadLine()!);
+
+                    if (userOptionTransferTo == 123456789)
                     {
                         personkonto.PersonKontoSaldo = personkonto.PersonKontoSaldo + moneyToTransfer;
                         Console.WriteLine($"Du har satt in: {moneyToTransfer} på ditt personskonto");
                         Console.WriteLine($"Ditt saldo är nu: {personkonto.PersonKontoSaldo}");
                     }
-                    if (userOptionTransfer == 23456789)
+                    if (userOptionTransferTo == 23456789)
                     {
                         sparkonto.SparKontoSaldo = sparkonto.SparKontoSaldo + moneyToTransfer;
                         Console.WriteLine($"Du har satt in: {moneyToTransfer} på ditt sparkonto");
                         Console.WriteLine($"Ditt saldo är nu: {sparkonto.SparKontoSaldo}");
                     }
-                    if (userOptionTransfer == 3456789)
+                    if (userOptionTransferTo == 3456789)
                     {
                         investeringskonto.InvesteringsKontoSaldo = investeringskonto.InvesteringsKontoSaldo + moneyToTransfer;
                         Console.WriteLine($"Du har satt in: {moneyToTransfer} på ditt investeringskonto");
                         Console.WriteLine($"Ditt saldo är nu: {investeringskonto.InvesteringsKontoSaldo}");
                     }
-                    if (userOptionTransfer != 123456789 && userOptionTransfer != 23456789 && userOptionTransfer != 3456789)
+                    if (userOptionTransferTo != 123456789 && userOptionTransferTo != 23456789 && userOptionTransferTo != 3456789)
                     {
                         Console.WriteLine("Fel kontonummer, försök igen");
                     }
